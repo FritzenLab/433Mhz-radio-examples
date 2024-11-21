@@ -25,13 +25,13 @@ void loop()
   {
     //Verifica o valor recebido pelo receptor
     int valor = rfsense.getReceivedValue();
-    digitalWrite(13, HIGH);
+    digitalWrite(13, !digitalRead(13));
           
     
     Serial.println(valor);
     rfsense.resetAvailable();  
   }else{
-    digitalWrite(13, LOW);
+    //digitalWrite(13, LOW);
   }
   
     
